@@ -77,14 +77,17 @@ do {
                     console.log(`Hay nhap mang truoc`);
                     break
                 }
+                flag = 0
                 for (let i = 0; i < array.length-i-1; i++) {
-                    if (array[i] === array[array.length - 1 - i]) {
-                        console.log(`hihi`);
-                    }
-                    else{
+                    if (array[i] !== array[array.length - 1 - i]) {
                         console.log(`Mang khong doi xung`);
+                        flag = 1
                         break;
+
                     }
+                }
+                if (flag === 0) {
+                    console.log(`Mang doi xung`);
                 }
                 break;
             case 7:
